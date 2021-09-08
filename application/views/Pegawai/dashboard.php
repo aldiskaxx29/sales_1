@@ -61,7 +61,7 @@
                       <div class="card-body">
                         <?php  
                           $this->db->from('orderan');
-                          $this->db->where('sales',$user['username']);
+                          $this->db->where('user_id',$user['id_user']);
                           echo $this->db->count_all_results();
                         ?>
                       </div>

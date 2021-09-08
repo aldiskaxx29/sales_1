@@ -48,6 +48,7 @@ class M_admin extends CI_Model{
 		$this->db->from('orderan');
 		$this->db->join('produk','produk.id_produk=orderan.produk_id');
 		$this->db->join('toko','toko.id=orderan.id_toko');
+		$this->db->join('user','user.id_user=orderan.user_id');
 		$this->db->where_in('status', 1);
 		// $this->db->where('status', 0);
 		// $this->db->order_by('DESC');

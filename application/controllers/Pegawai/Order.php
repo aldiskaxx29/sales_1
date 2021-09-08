@@ -79,7 +79,7 @@ class Order extends CI_Controller{
 				'produk_id'			=> $id_produk,
 				'kategori_id'		=> $id_kategori,
 				'id_toko'			=> $id_toko,
-				'sales'				=> $this->session->userdata('username'),
+				'user_id'			=> $data['user']['id_user'],
 				'tgl_order' 		=> date('Y-m-d'),
 				'qty' 				=> $qty,
 				'keterangan' 		=> $keterangan,

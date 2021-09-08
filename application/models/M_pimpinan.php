@@ -52,6 +52,7 @@ class M_pimpinan extends CI_Model{
 		$this->db->from('orderan');
 		$this->db->join('produk','produk.id_produk=orderan.produk_id');
 		$this->db->join('toko','toko.id = orderan.id_toko');
+		$this->db->join('user','user.id_user=orderan.user_id');
 		$this->db->where_in('status', [0,3]);
 		$query = $this->db->get();
 		return $query->result();

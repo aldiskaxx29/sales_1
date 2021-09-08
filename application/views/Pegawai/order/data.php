@@ -37,7 +37,7 @@
                 <tr>
                   <td><?= $no+1 ?></td>
                   <td><?= $or->tgl_order ?></td>
-                  <td><?= $or->sales ?></td>
+                  <td><?= $or->username ?></td>
                   <td><?= $or->nama_toko ?></td>
                   <td><?= $or->alamat ?></td>
                   <td><?= $or->nama_produk ?></td>
