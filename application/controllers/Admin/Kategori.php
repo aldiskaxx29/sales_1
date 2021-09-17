@@ -24,8 +24,9 @@ class Kategori extends CI_Controller
 			$this->load->view('templates/footer');
 		}
 		else{
+			// var_dump($this->input->post());die;
 			$kategori = $this->input->post('kategori');
-
+			// var_dump($kategori);die;
 			$data = [
 				'kategori' => $kategori,
 			];

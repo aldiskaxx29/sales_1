@@ -14,6 +14,7 @@ class Order extends CI_Controller{
 		// var_dump($user);die;
 		$data['title'] = 'Data Order';
 		$data['user'] = $this->M_pegawai->get_where();
+		// echo $data['user']['id_user'];die;
 		// $data['order'] = $this->db->get('orderan')->result();
 		$data['order'] = $this->M_pegawai->join_order();
 		$data['produk'] = $this->db->get('produk')->result();

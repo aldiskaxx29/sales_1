@@ -6,6 +6,8 @@ class User extends CI_Controller
 	public function __construct(){
 		parent::__construct();
 		auth_check();
+		$this->load->model('M_admin','admin');
+		$this->load->model('M_pegawai','pegawai');
 	}
 	
 	public function index(){
@@ -24,9 +26,15 @@ class User extends CI_Controller
 	}
 
 	public function create(){
-		$data['title'] = 'Create Data User';
-		$data['user'] = $this->M_pegawai->get_where();
-		$data['users'] = $this->M_admin->get('user');
+		// $data['title'] = 'Create Data User';
+		// $data['user'] = $this->M_pegawai->get_where();
+		// $data['users'] = $this->M_admin->get('user');
+		$data = [
+			'title' => 'Tambah Data User',
+			'user'  => $this->pegawai->get_where(),
+			'users' => $this->admin->get('user'),
+			'role'  => $this->admin->get('company'),
+		];
 		$this->form_validation->set_rules('username','Username','required|trim', [
 			'required' => 'Tidak Boeleh Kosong',
 		]);

@@ -74,7 +74,7 @@
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">
-                      Update
+                      Ubah
                     </button>
                   </div>
                 </form>
