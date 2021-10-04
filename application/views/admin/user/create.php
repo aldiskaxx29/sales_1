@@ -42,12 +42,18 @@
                       <label for="agama" class="d-block">Company</label>
                       <select class="form-control" name="company">
                         <option value="">-- Pilihan --</option>
+<<<<<<< HEAD
                         <option value="">PIMPINAN</option>
                         <option value="">ADMIN</option>
                         <option value="">SALES</option>                        
                         <!-- <?php foreach ($role as $item): ?>
                           <option value="<?= $item->role ?>"><?= $item->role ?></option>                       
                         <?php endforeach ?> -->
+=======
+                        <?php foreach ($role as $item): ?>
+                          <option value="<?= $item->role ?>"><?= $item->role ?></option>                       
+                        <?php endforeach ?>
+>>>>>>> 412dc503ca4a65ad66e1ece85841f1d0d547e7f5
                       </select>
                       <?= form_error('company','<small class="text-danger">','</small>') ?>
                     </div>

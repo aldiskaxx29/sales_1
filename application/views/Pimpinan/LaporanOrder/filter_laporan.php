@@ -33,7 +33,11 @@
              
             </div>
           </div>
+<<<<<<< HEAD
           <hr> 
+=======
+          <hr>
+>>>>>>> 412dc503ca4a65ad66e1ece85841f1d0d547e7f5
           <div class="row">
             <div class="col-md-12">
               <table class="table table-striped">

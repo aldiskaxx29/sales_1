@@ -50,9 +50,15 @@
                 <li class="<?php if ($this->uri->segment('2') == 'User'): ?> active <?php endif ?>">
                   <a class="nav-link" href="<?= base_url('Admin/User/')  ?>"><i class="fas fa-user"></i> <span>Data User</span></a>
                 </li>
+<<<<<<< HEAD
                 <!-- <li class="<?php if ($this->uri->segment('2') == 'Role'): ?> active <?php endif ?>">
                   <a class="nav-link" href="<?= base_url('Admin/Role/')  ?>"><i class="fa fa-child"></i> <span>Data Role</span></a>
                 </li> -->
+=======
+                <li class="<?php if ($this->uri->segment('2') == 'Role'): ?> active <?php endif ?>">
+                  <a class="nav-link" href="<?= base_url('Admin/Role/')  ?>"><i class="fa fa-child"></i> <span>Data Role</span></a>
+                </li>
+>>>>>>> 412dc503ca4a65ad66e1ece85841f1d0d547e7f5
               <?php endif ?>
               <?php if ($user['company'] == 'SALES'): ?>
                 <li class="<?php if ($this->uri->segment('2') == 'Dashboard'): ?> active <?php endif ?>">
