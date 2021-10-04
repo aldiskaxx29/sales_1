@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2021 at 09:53 AM
+-- Generation Time: Oct 04, 2021 at 10:52 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -33,7 +33,7 @@ CREATE TABLE `orderan` (
   `produk_id` int(11) NOT NULL,
   `kategori_id` int(11) NOT NULL,
   `id_toko` int(11) NOT NULL,
-  `sales` varchar(125) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `tgl_order` date NOT NULL,
   `qty` varchar(11) NOT NULL,
   `keterangan` text NOT NULL,
@@ -44,13 +44,13 @@ CREATE TABLE `orderan` (
 -- Dumping data for table `orderan`
 --
 
-INSERT INTO `orderan` (`id_order`, `produk_id`, `kategori_id`, `id_toko`, `sales`, `tgl_order`, `qty`, `keterangan`, `status`) VALUES
-(20, 1, 6, 2, 'lutfi', '2021-09-02', '2', 'ada', 0),
-(21, 3, 3, 10, 'lutfi', '2021-09-03', '1', 'box untuk makanan', 0),
-(22, 4, 8, 14, 'lutfi', '2021-09-03', '1', 'ada lah', 2),
-(23, 13, 5, 10, 'lutfi', '2021-09-04', '1', 'mau alat - alat vicenza nya donk', 2),
-(26, 14, 4, 13, 'lutfi', '2021-09-08', '1', 'a', 0),
-(29, 14, 4, 11, 'lutfi', '2021-09-08', '4', 'ada', 0);
+INSERT INTO `orderan` (`id_order`, `produk_id`, `kategori_id`, `id_toko`, `user_id`, `tgl_order`, `qty`, `keterangan`, `status`) VALUES
+(20, 1, 6, 2, 5, '2021-09-02', '2', 'ada', 1),
+(21, 3, 3, 10, 5, '2021-09-03', '1', 'box untuk makanan', 1),
+(22, 4, 8, 14, 5, '2021-09-03', '1', 'ada lah', 2),
+(23, 13, 5, 10, 5, '2021-09-04', '1', 'mau alat - alat vicenza nya donk', 2),
+(26, 14, 4, 13, 5, '2021-09-08', '1', 'a', 0),
+(29, 14, 4, 11, 5, '2021-09-08', '4', 'ada', 0);
 
 --
 -- Triggers `orderan`
@@ -116,7 +116,8 @@ INSERT INTO `tb_kategori` (`id_kategori`, `kategori`, `date`) VALUES
 (4, 'Kabel', '2021-08-07 05:49:51'),
 (5, 'Besi', '2021-08-10 08:47:32'),
 (6, 'Hampers', '2021-08-12 14:24:41'),
-(8, 'Box', '2021-08-23 23:40:15');
+(8, 'Box', '2021-08-23 23:40:15'),
+(9, 'Mainan', '2021-09-09 15:34:24');
 
 -- --------------------------------------------------------
 
@@ -229,7 +230,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `toko`
@@ -241,7 +242,7 @@ ALTER TABLE `toko`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

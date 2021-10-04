@@ -31,10 +31,10 @@
                   <a href="<?= base_url('/Admin/Dashboard') ?>" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 </li>
                 <li class="menu-header">Starter</li>
-                <li class="<?php if ($this->uri->segment('2') == 'Sales'): ?> active <?php endif ?>">
+                <!-- <li class="<?php if ($this->uri->segment('2') == 'Sales'): ?> active <?php endif ?>">
                   <a class="nav-link" href="<?= base_url('Admin/Sales/')  ?>"><i class="fas fa-home"></i> <span>Data Sales</span></a>
                 </li>
-                
+                 -->
                 <li class="<?php if ($this->uri->segment('2') == 'Produk'): ?> active <?php endif ?>">
                   <a class="nav-link" href="<?= base_url('Admin/Produk/')  ?>"><i class="fas fa-store"></i> <span>Data Produk</span></a>
                 </li>
@@ -50,6 +50,9 @@
                 <li class="<?php if ($this->uri->segment('2') == 'User'): ?> active <?php endif ?>">
                   <a class="nav-link" href="<?= base_url('Admin/User/')  ?>"><i class="fas fa-user"></i> <span>Data User</span></a>
                 </li>
+                <!-- <li class="<?php if ($this->uri->segment('2') == 'Role'): ?> active <?php endif ?>">
+                  <a class="nav-link" href="<?= base_url('Admin/Role/')  ?>"><i class="fa fa-child"></i> <span>Data Role</span></a>
+                </li> -->
               <?php endif ?>
               <?php if ($user['company'] == 'SALES'): ?>
                 <li class="<?php if ($this->uri->segment('2') == 'Dashboard'): ?> active <?php endif ?>">

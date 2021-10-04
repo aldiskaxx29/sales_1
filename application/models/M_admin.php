@@ -48,7 +48,7 @@ class M_admin extends CI_Model{
 		$this->db->from('orderan');
 		$this->db->join('produk','produk.id_produk=orderan.produk_id');
 		$this->db->join('toko','toko.id=orderan.id_toko');
-		$this->db->join('user','user.id_user=orderan.user_id');
+		$this->db->join('user','user.id_user = orderan.user_id');
 		$this->db->where_in('status', 1);
 		// $this->db->where('status', 0);
 		// $this->db->order_by('DESC');
@@ -74,23 +74,6 @@ class M_admin extends CI_Model{
 		$kode_fix = "BRG" .$kode_max;
 		return $kode_fix;
 
-		// $this->db->select('RIGHT(tb_buku.id_buku,6) as kode', FALSE);
-		// $this->db->order_by('id_buku','DESC');
-		// $this->db->limit(1);
-
-		// $query = $this->db->get('tb_buku');
-
-		// if ($query->num_rows() > 0) {
-		// 	$data = $query->row();
-		// 	$kode = intval($data->kode)+1;
-		// }
-		// else{
-		// 	$kode=1;
-		// }
-
-		// $kode_max = str_pad($kode,6,"0",STR_PAD_LEFT);
-		// $kode_jadi = "KBK" .$kode_max;
-		// return $kode_jadi;
 	}
 
 	public function kodeToko(){

@@ -22,7 +22,7 @@
                 <th>No</th>
                 <th>Username</th>
                 <th>Email</th>
-                <th>Company</th>
+                <th>Jabatan</th>
                 <th>No Telepon</th>
                 <th>Active</th>
                 <th>Create</th>

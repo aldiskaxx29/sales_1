@@ -42,17 +42,15 @@
                       <label for="agama" class="d-block">Company</label>
                       <select class="form-control" name="company">
                         <option value="">-- Pilihan --</option>
-                        <option value="PIMPINAN">PIMPINAN</option>
-                        <option value="ADMIN">ADMIN</option>
-                        <option value="SALES">SALES</option>
+                        <option value="">PIMPINAN</option>
+                        <option value="">ADMIN</option>
+                        <option value="">SALES</option>                        
+                        <!-- <?php foreach ($role as $item): ?>
+                          <option value="<?= $item->role ?>"><?= $item->role ?></option>                       
+                        <?php endforeach ?> -->
                       </select>
                       <?= form_error('company','<small class="text-danger">','</small>') ?>
                     </div>
-                    <!-- <div class="form-group col-4">
-                      <label for="no_hp" class="d-block">No Handphon</label>
-                      <input id="no_hp" type="text" class="form-control" name="no_hp" value="<?= set_value('no_hp') ?>">
-                      <?= form_error('no_hp','<small class="text-danger">','</small>') ?>
-                    </div> -->
                   </div>
 
                   <div class="row">

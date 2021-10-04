@@ -78,10 +78,7 @@
                         <h4>Data Absen</h4>
                       </div>
                       <div class="card-body">
-                        <?php  
-                          $this->db->from('absen');
-                          echo $this->db->count_all_results();
-                        ?>
+                        
                       </div>
                     </div>
                   </div>

@@ -30,6 +30,12 @@
               </form>
             </div>
             <div class="col-md-8">
+             
+            </div>
+          </div>
+          <hr> 
+          <div class="row">
+            <div class="col-md-12">
               <table class="table table-striped">
                 <thead>
                   <tr>

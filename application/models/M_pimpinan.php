@@ -33,7 +33,7 @@ class M_pimpinan extends CI_Model{
 
 	public function filterbytanggal($dari,$sampai){
 		// $query = $this->db->query("SELECT * FROM orderan WHERE tgl_order BETWEEN '$dari' AND '$sampai' ORDER BY tgl_order ASC ");
-		$query = $this->db->query("SELECT * FROM orderan JOIN produk ON orderan.id_produk = produk.id_produk JOIN toko ON toko.id  = orderan.id_toko WHERE tgl_order BETWEEN '$dari' AND '$sampai' ORDER BY tgl_order ASC ");
+		$query = $this->db->query("SELECT * FROM orderan JOIN produk ON orderan.produk_id = produk.id_produk JOIN toko ON toko.id  = orderan.id_toko WHERE tgl_order BETWEEN '$dari' AND '$sampai' ORDER BY tgl_order ASC ");
 		return $query->result();
 	}
 
@@ -50,9 +50,9 @@ class M_pimpinan extends CI_Model{
 	public function join_order(){
 		$this->db->select('*');
 		$this->db->from('orderan');
-		$this->db->join('produk','produk.id_produk=orderan.produk_id');
+		$this->db->join('produk','produk.id_produk = orderan.produk_id');
 		$this->db->join('toko','toko.id = orderan.id_toko');
-		$this->db->join('user','user.id_user=orderan.user_id');
+		$this->db->join('user','user.id_user = orderan.user_id');
 		$this->db->where_in('status', [0,3]);
 		$query = $this->db->get();
 		return $query->result();
